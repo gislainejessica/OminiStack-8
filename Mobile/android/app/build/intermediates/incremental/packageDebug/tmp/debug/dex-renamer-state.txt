@@ -1,0 +1,4 @@
+#Mon Oct 07 10:56:56 BRT 2019
+base.0=/home/gislaine/OminiStack-8/Mobile/android/app/build/intermediates/transforms/dexMerger/debug/0
+renamed.0=classes.dex
+path.0=classes.dex

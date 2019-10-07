@@ -38,7 +38,6 @@ export default function Main({navigation}){
         // Ouvindo o evento de Match
         socket.on('deuMatch', dev => { 
             setmatchDev(dev); 
-            //console.log("App: ", dev) 
         } );
         
      }, [id])

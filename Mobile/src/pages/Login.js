@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
+import AsyncStorage from '@react-native-community/async-storage'
 import {
     Text, 
     Platform, 
@@ -8,9 +9,6 @@ import {
     TextInput, 
     TouchableOpacity
 } from 'react-native'
-
-import AsyncStorage from '@react-native-community/async-storage'
-
 import logo from '../assets/logo.png'
 import axios from '../services/api'
 
@@ -26,10 +24,13 @@ export default function Login({navigation}){
     },[])
 
     async function handleLogin(){
-        const response =  await axios.post('/devs', {username: user})
-        const {_id} = response.data
+        const response =  await axios.post('/devs', {
+            username: user
+        })
+        const { _id } = response.data
+        console.log(_id)
         await AsyncStorage.setItem('user', _id)
-        navigation.navigate('Main', {user:_id})
+        navigation.navigate('Main', { user: _id })
     }
 
     return (

@@ -25,7 +25,7 @@ io.on('connection', socket => {
 });
 
 mongoose.connect("mongodb+srv://cha_comigo:cha_comigo@cluster0-udt7r.mongodb.net/oministack8?retryWrites=true&w=majority",{
-    useNewUrlParser:true
+    useNewUrlParser:true,  useUnifiedTopology: true 
 });
 
 // Expert (Midlleware de conexão com LikeController)
