@@ -1,0 +1,1 @@
+Primeira implementação de app mobile da Semana OminiStack 8.0
